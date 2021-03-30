@@ -55,6 +55,4 @@ client.connect((err) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Unmoy's Web`);
-});
+app.listen(process.env.PORT || port);
