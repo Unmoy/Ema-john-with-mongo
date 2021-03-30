@@ -26,6 +26,9 @@ client.connect((err) => {
       res.send(result.insertedCount);
     });
   });
+  app.get("/", (req, res) => {
+    res.send("This is Unmoy's Web");
+  });
   app.get("/products", (req, res) => {
     productsCollection.find({}).toArray((err, documents) => {
       res.send(documents);
